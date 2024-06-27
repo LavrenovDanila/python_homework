@@ -5,8 +5,6 @@ print(power_numbers())
 
 #Фильтрация чисел
 numbers = (1, 3, 5, 7)
-
-
 def is_prime(n):
     if n < 2:
         return False
@@ -14,11 +12,10 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
-# Фильтр типов
+# filter types
 ODD = "odd"
 EVEN = "even"
 PRIME = "prime"
-
 
 def filter_numbers(numbers, filter_type):
     if filter_type == ODD:
