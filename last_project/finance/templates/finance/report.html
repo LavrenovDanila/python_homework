@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Financial Report</title>
+    <link rel="stylesheet" href="{% static 'finance/styles.css' %}">
+</head>
+<body>
+    <h1>Financial Report</h1>
+    <p>Total Income: {{ total_income }}</p>
+    <p>Total Expense: {{ total_expense }}</p>
+    <p>Net Savings: {{ total_income|add:total_expense|neg }}</p>
+    <a href="{% url 'transaction_list' %}">Back to Transactions</a>
+</body>
+</html>

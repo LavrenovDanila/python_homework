@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget</title>
+    <link rel="stylesheet" href="{% static 'finance/styles.css' %}">
+</head>
+<body>
+    <h1>Your Budgets</h1>
+    <a href="{% url 'add_budget' %}">Add Budget</a>
+    <ul>
+        {% for budget in budgets %}
+            <li>{{ budget.category.name }}: {{ budget.amount }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
